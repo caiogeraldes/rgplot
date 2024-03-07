@@ -1,0 +1,11 @@
+Package: rgplot
+Title: Statistical Rethinking ggplot utils
+Version: 0.0.0.9001
+Authors@R: 
+    person("Caio", "Geraldes", , "caio.geraldes@usp.br", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Provides a series of utility functions for plotting with `ggplot` the objects produced while working on McElreath's Statistical Rethinking
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
