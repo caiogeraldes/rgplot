@@ -10,7 +10,10 @@
 #' @importFrom ggplot2 xlab
 #' @importFrom ggplot2 ylab
 #' @importFrom magrittr %>%
+#' @importFrom rethinking HPDI
+#' @importFrom rethinking PI
 #' @importFrom stats density
+#' @importFrom stringr str_c
 #' @importFrom tibble tibble
 ## usethis namespace: end
 NULL

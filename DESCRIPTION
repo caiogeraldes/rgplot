@@ -1,6 +1,6 @@
 Package: rgplot
 Title: Statistical Rethinking ggplot utils
-Version: 0.0.0.9001
+Version: 0.0.1
 Authors@R: 
     person("Caio", "Geraldes", , "caio.geraldes@usp.br", role = c("aut", "cre"),
            )
@@ -14,5 +14,7 @@ BugReports: https://github.com/caiogeraldes/rgplot/issues
 Imports: 
     ggplot2,
     magrittr,
+    rethinking,
     stats,
+    stringr,
     tibble
