@@ -1,4 +1,3 @@
-require("tidyverse")
 require("tibble")
 require("ggplot2")
 
@@ -23,21 +22,27 @@ plot_dens_boundaries <- function(samples,
         )
 
         if (!is.null(posterior)) {
+                x <- seq(from = 0, to = 1, length.out = length(posterior))
+                y <- posterior
                 df <- tibble(
-                        x = seq(from = 0, to = 1, length.out = length(posterior)),
-                        y = posterior
+                        x = x,
+                        y = y
                 )
         } else {
                 df <- samples_dens
         }
-        df %>% ggplot(aes(x, y)) + # nolint
+        plt <- df %>% ggplot(aes(x, y)) + # nolint
                 geom_line() +
                 geom_area(
-                        data = subset(df, x > boundaries[1] & x < boundaries[2]),
+                        data = subset(
+                                df,
+                                x > boundaries[1] & x < boundaries[2]
+                        ),
                         fill = "purple",
                         alpha = 0.5
                 ) +
                 xlab(xlabel) +
                 ylab("density") +
                 labs(title = title)
+        return(plt)
 }
